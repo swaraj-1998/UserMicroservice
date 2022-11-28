@@ -1,9 +1,6 @@
 package com.exam.architecturefinal.users.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "user")
@@ -12,7 +9,7 @@ public class User {
     private String username;
     private String password;
     private String email;
-    @Id
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
 
